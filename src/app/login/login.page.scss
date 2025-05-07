@@ -1,0 +1,24 @@
+/* Adicione isso ao seu arquivo SCSS */
+.main-header {
+    --background: transparent !important;
+    background: transparent !important;
+    position: absolute; /* Faz o header flutuar sobre o content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Garante que o header fique acima do conteúdo */
+  }
+  
+  .main-container {
+    --background: url('../../assets/images/background-login.png') no-repeat center center / cover;
+    position: relative; /* Permite que o header absolute fique relativo a este container */
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  
+  /* Ajuste para a logo */
+  #brunch-logo-white {
+    width: 40%;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); /* Melhora a visibilidade */
+  }
