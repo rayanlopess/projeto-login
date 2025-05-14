@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -16,11 +16,22 @@ import {
   IonMenuButton,
   IonButtons, 
   IonCard,
+  IonInput,
+  IonIcon,
   IonCardContent,
-  IonCardHeader,
-  IonCardTitle
+  IonList,
+  IonItem, 
+  IonAvatar,
+  IonCheckbox,
+  IonLabel,
+  IonInputPasswordToggle
+
 } from '@ionic/angular/standalone';
 import { Title } from '@angular/platform-browser';
+
+
+import { addIcons } from 'ionicons';
+import { lockOpen,lockClosed, eye, person} from 'ionicons/icons';
 
 @Component({
   selector: 'app-login',
@@ -42,16 +53,23 @@ import { Title } from '@angular/platform-browser';
     IonMenuButton, 
     IonButtons,
     IonCard,
+    IonIcon,
+    IonInput,
     IonCardContent,
-    IonCardHeader,
-    IonCardTitle
+    IonAvatar,
+    IonCheckbox,
+    IonLabel,
+    IonInputPasswordToggle
+    
   ]
 })
 export class LoginPage implements OnInit {
 
   constructor(
     private titleService: Title
-  ) { }
+  ) { 
+    addIcons({lockOpen,lockClosed, eye, person})
+  }
 
   ngOnInit() {
     //Puxa serviço de titulo da página para alterar
@@ -59,7 +77,8 @@ export class LoginPage implements OnInit {
   }
 
   public menuType:string = 'push'
-
+  
+  @Input() showPassword = false;
 
 }
 

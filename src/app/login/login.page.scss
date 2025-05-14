@@ -17,8 +17,88 @@
     height: 100%;
   }
   
+
+
+
+
   /* Ajuste para a logo */
   #brunch-logo-white {
     width: 40%;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); /* Melhora a visibilidade */
   }
+
+
+
+
+/* CSS ATUALIZADO E TESTADO */
+.login-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  position: relative;
+}
+
+.login-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  position: relative;
+  margin-top: 60px;
+  padding-top: 50px;
+
+}
+
+
+
+
+.avatar-overlay {
+  position: absolute;
+  margin-bottom: 75%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.centered-avatar {
+  width: 100px;
+  height: 100px;
+  border: 1px solid whitesmoke;
+
+  
+}
+
+
+
+
+ion-input {
+  --color: whitesmoke;
+}
+ion-checkbox{
+  --color: blue !important;
+  --background: whitesmoke;
+  --size:20px;
+}
+#colorRememberMe{
+  color: #222;
+}
+#btEntrar {
+    --color: #444444;
+    --background: whitesmoke;
+
+}
+#forgetPassword{
+  text-align: center;
+
+}
+#linkPassword{
+  color: #222;
+}
+.iconInput{
+  --width: 40px;
+}

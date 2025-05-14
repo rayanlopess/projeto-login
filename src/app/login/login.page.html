@@ -38,22 +38,88 @@
 
   <!-- content da página principal -->
   <ion-content class="ion-padding main-container">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title>Card Title</ion-card-title>
-              
-            </ion-card-header>
+    
+    <div class="login-wrapper">
+      
+      <div class="avatar-overlay">
+        <ion-avatar class="centered-avatar">
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+      </div>
+
+      <ion-card class="login-card">
+        
+        
+
+        <ion-card-content class="card-content">
+          <ion-grid>
+
+
+
+            <ion-row>
+              <ion-col>
+
+                <ion-input 
+                    class="iconInput"
+                    label="Usuário" 
+                    label-placement="floating" 
+                    fill="outline" 
+                    placeholder="Digite o Usuário"
+                    color="dark">
+                    <ion-icon slot="start" name="person" aria-hidden="true"></ion-icon>
+                </ion-input>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col>
+               
+                <ion-input 
+                label="Senha" 
+                label-placement="floating" 
+                fill="outline" 
+                [type]="showPassword ? 'text' : 'password'"
+                placeholder="Digite a senha"
+                color="dark">
+               
+                  <ion-icon 
+                  class="iconInput"
+                  slot="start" 
+                  [name]="showPassword ? 'lock-open' : 'lock-closed'" 
+                  (click)="showPassword = !showPassword"
+                ></ion-icon>
+              </ion-input>
+               
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col>
+                <ion-checkbox labelPlacement="end" color="dark"><ion-label id="colorRememberMe">Me lembre a senha</ion-label></ion-checkbox>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col>
+                <ion-button id="btEntrar" expand="block">Entrar</ion-button>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col id="forgetPassword">
+                  <a href="#" id="linkPassword">Esqueci minha senha</a>
+              </ion-col>
+            </ion-row>
+
+
+          </ion-grid>
+        </ion-card-content>
+
+      </ion-card>
+      
+    </div>
           
-            <ion-card-content>
-              Here's a small text description for the card content. Nothing more, nothing less.
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+       
   </ion-content>
-  
+
 </div>
