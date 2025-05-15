@@ -32,6 +32,8 @@ import { Title } from '@angular/platform-browser';
 
 import { addIcons } from 'ionicons';
 import { lockOpen,lockClosed, eye, person} from 'ionicons/icons';
+import { RouterLink } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -59,16 +61,32 @@ import { lockOpen,lockClosed, eye, person} from 'ionicons/icons';
     IonAvatar,
     IonCheckbox,
     IonLabel,
-    IonInputPasswordToggle
+    IonInputPasswordToggle,
+    RouterLink
     
   ]
 })
 export class LoginPage implements OnInit {
 
   constructor(
-    private titleService: Title
+    private titleService: Title,
+    private menuCtrl: MenuController
   ) { 
     addIcons({lockOpen,lockClosed, eye, person})
+  }
+  async closeMenu() {
+    await this.menuCtrl.close();
+  }
+  ionViewWillEnter() {
+    // Esta função será executada toda vez que a página for acessada
+    this.loadData(); // Chame sua função de atualização aqui
+    // Ou simplesmente:
+    
+  }
+
+  loadData() {
+    // Lógica para recarregar dados da sua página
+    console.log('Atualizando dados da página...');
   }
 
   ngOnInit() {

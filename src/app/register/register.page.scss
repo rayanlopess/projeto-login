@@ -1,0 +1,93 @@
+/* Adicione isso ao seu arquivo SCSS */
+.main-header {
+    --background: transparent !important;
+    background: transparent !important;
+    position: absolute; /* Faz o header flutuar sobre o content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Garante que o header fique acima do conteúdo */
+  }
+  
+  .main-container {
+    --background: url('../../assets/images/background-login.png') no-repeat center center / cover;
+    position: relative; /* Permite que o header absolute fique relativo a este container */
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  
+
+
+
+
+  /* Ajuste para a logo */
+  #brunch-logo-white {
+    width: 40%;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); /* Melhora a visibilidade */
+  }
+
+
+
+
+/* CSS ATUALIZADO E TESTADO */
+.login-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  position: relative;
+}
+
+.login-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  position: relative;
+  
+
+}
+
+#titulo{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+
+
+
+
+
+ion-input {
+  --color: whitesmoke;
+  
+}
+ion-checkbox{
+  --color: blue !important;
+  --background: whitesmoke;
+  --size: 15px;
+}
+#colorRememberMe{
+  color: #222;
+}
+#btEntrar {
+    --color: #444444;
+    --background: whitesmoke;
+
+}
+#forgetPassword{
+  text-align: center;
+
+}
+#linkPassword{
+  color: #222;
+}
+.iconInput{
+  --width: 40px;
+}
