@@ -24,7 +24,8 @@ import {
   IonAvatar,
   IonCheckbox,
   IonLabel,
-  IonInputPasswordToggle
+  IonInputPasswordToggle,
+  IonRouterOutlet
 
 } from '@ionic/angular/standalone';
 import { Title } from '@angular/platform-browser';
@@ -32,8 +33,8 @@ import { Title } from '@angular/platform-browser';
 
 import { addIcons } from 'ionicons';
 import { lockOpen,lockClosed, eye, person, man, mail} from 'ionicons/icons';
-import { RouterLink } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { RouterLink, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
@@ -62,7 +63,8 @@ import { MenuController } from '@ionic/angular';
     IonCheckbox,
     IonLabel,
     IonInputPasswordToggle,
-    RouterLink
+    RouterLink,
+    IonRouterOutlet
     
   ]
 })
@@ -70,14 +72,16 @@ export class RegisterPage implements OnInit {
 
   constructor(
     private titleService: Title,
-    private menuCtrl: MenuController
+    private router: Router
   ) { 
     addIcons({lockOpen,lockClosed, eye, person, man, mail})
   }
 
-  async closeMenu() {
-    await this.menuCtrl.close();
+
+  async login() {
+    this.router.navigate(['/login'])
   }
+ 
 
   ionViewWillEnter() {
     // Esta função será executada toda vez que a página for acessada
@@ -96,7 +100,6 @@ export class RegisterPage implements OnInit {
     this.titleService.setTitle("Cadastro");
   }
 
-  public menuType:string = 'push'
   
   @Input() showPassword = false;
 

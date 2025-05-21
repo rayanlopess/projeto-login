@@ -1,17 +1,6 @@
 <!-- conteudo do menu -->
-<ion-menu [type]="menuType" content-id="main-content">
-  <!-- header do menu -->
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Conteúdo do Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-menu>
 
-  <!-- content do menu -->
-  <ion-content class="ion-padding">
-      <ion-button expand="block" color="dark" routerLink="/home" (click)="closeMenu()">Home</ion-button>
-      <ion-button expand="block" color="dark" routerLink="/login" (click)="closeMenu()">Login</ion-button>
-  </ion-content>
 
 </ion-menu>
 
@@ -126,7 +115,7 @@
             <ion-row>
               <ion-col>
                 <ion-checkbox labelPlacement="end" color="dark">
-                  <ion-label id="colorRememberMe">I agree to the <a href="#" (click)="$event.stopPropagation()">terms and conditions</a>
+                  <ion-label id="colorRememberMe">Concordo com os <a href="#" (click)="$event.stopPropagation()">termos e condições</a>
                   </ion-label>
                 </ion-checkbox>
               </ion-col>
@@ -134,7 +123,8 @@
 
             <ion-row>
               <ion-col>
-                <ion-button id="btEntrar" expand="block">Cadastrar-se</ion-button>
+                <ion-button id="btCadastrar" color="light" expand="block">Cadastrar-se</ion-button>
+                <ion-button id="btEntrar" expand="block" (click)="login()">Entrar</ion-button>
               </ion-col>
             </ion-row>
 

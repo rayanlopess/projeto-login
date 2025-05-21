@@ -24,7 +24,8 @@ import {
   IonAvatar,
   IonCheckbox,
   IonLabel,
-  IonInputPasswordToggle
+  IonInputPasswordToggle,
+  IonRippleEffect
 
 } from '@ionic/angular/standalone';
 import { Title } from '@angular/platform-browser';
@@ -32,8 +33,7 @@ import { Title } from '@angular/platform-browser';
 
 import { addIcons } from 'ionicons';
 import { lockOpen,lockClosed, eye, person} from 'ionicons/icons';
-import { RouterLink } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -62,7 +62,8 @@ import { MenuController } from '@ionic/angular';
     IonCheckbox,
     IonLabel,
     IonInputPasswordToggle,
-    RouterLink
+    RouterLink,
+    IonRippleEffect
     
   ]
 })
@@ -70,13 +71,16 @@ export class LoginPage implements OnInit {
 
   constructor(
     private titleService: Title,
-    private menuCtrl: MenuController
+    private router: Router
   ) { 
     addIcons({lockOpen,lockClosed, eye, person})
   }
-  async closeMenu() {
-    await this.menuCtrl.close();
+
+  async cadastrar() {
+    this.router.navigate(['/register'])
   }
+  
+
   ionViewWillEnter() {
     // Esta função será executada toda vez que a página for acessada
     this.loadData(); // Chame sua função de atualização aqui
@@ -92,9 +96,9 @@ export class LoginPage implements OnInit {
   ngOnInit() {
     //Puxa serviço de titulo da página para alterar
     this.titleService.setTitle("Login");
+    
   }
 
-  public menuType:string = 'push'
   
   @Input() showPassword = false;
 
