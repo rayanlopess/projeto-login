@@ -77,7 +77,18 @@ export class LoginPage implements OnInit {
   }
 
   async cadastrar() {
+    let home = document.querySelector('.home');
+    home?.classList.remove('active');
+    
+    let login = document.querySelector('.login');
+    login?.classList.remove('active');
+    
+    let register = document.querySelector('.register');
+    register?.classList.add('active');
+    
     this.router.navigate(['/register'])
+
+
   }
   
 

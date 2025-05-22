@@ -54,33 +54,33 @@ export class AppComponent implements OnInit {
   }
   botaoHome(){
     let home = document.querySelector('.home');
-    home?.classList.add('ative');
+    home?.classList.add('active');
     
     let login = document.querySelector('.login');
-    login?.classList.remove('ative');
+    login?.classList.remove('active');
     
     let register = document.querySelector('.register');
-    register?.classList.remove('ative');
+    register?.classList.remove('active');
     
   }
   botaoLogin(){
     let home = document.querySelector('.home');
-    home?.classList.remove('ative');
+    home?.classList.remove('active');
     
     let login = document.querySelector('.login');
-    login?.classList.add('ative');
+    login?.classList.add('active');
     
     let register = document.querySelector('.register');
-    register?.classList.remove('ative');
+    register?.classList.remove('active');
   }
   botaoCadastro(){
     let home = document.querySelector('.home');
-    home?.classList.remove('ative');
+    home?.classList.remove('active');
     
     let login = document.querySelector('.login');
-    login?.classList.remove('ative');
+    login?.classList.remove('active');
     
     let register = document.querySelector('.register');
-    register?.classList.add('ative');
+    register?.classList.add('active');
   }
 }

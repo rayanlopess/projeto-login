@@ -79,6 +79,15 @@ export class RegisterPage implements OnInit {
 
 
   async login() {
+    let home = document.querySelector('.home');
+    home?.classList.remove('active');
+    
+    let login = document.querySelector('.login');
+    login?.classList.add('active');
+    
+    let register = document.querySelector('.register');
+    register?.classList.remove('active');
+
     this.router.navigate(['/login'])
   }
  
